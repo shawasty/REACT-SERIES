@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 22px;
+}
+
+body{
+  min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ height: 100%;
+  max-width: 100%;
+}
+
+.header{
+  width: 100%;
+  padding: 0 0.25em;
+  background-color: lightblue;
+  color: mediumvioletred;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+.footer{
+ color: blue;
+ background-color: red;
+ margin-top: 20px;
+ width:100%;
+ height: 10%;
+ display: flex;
+justify-content: center;
+}
+.main{
+  height: 60%;
+  padding: 30%;
+}
+
+ul{
+  width: 100%;
+  list-style: none;
+  padding: 0 0.25rem 0.25rem;
+}
+
+ul li::before{
+  content: "\200B";
+}
+
+.item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+  background-color: #eee;
+}
+.item:nth-child(1){
+  margin: 0;
+}
+
+.item input  {
+  text-align: center;
+  width: 2.5rem;
+  width: 48px;
+  min-width: 48px;
+  height: 2.5rem;
+  height: 48px;
+  min-height: 48Px;
+  cursor: pointer;
+  margin-right: 0;
+}
+
+.item input :focus + label {
+  text-decoration: underline;
+}
+
+.item svg {
+  width: 48px;
+  min-width: 48px;height: 36px;font-style: 1re;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.item svg:focus,
+.item svg:hiver {
+  color: red;
+  outline: none;
+}
