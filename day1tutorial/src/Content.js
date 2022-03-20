@@ -1,42 +1,7 @@
-import { useState } from "react";
+
 import { BsTrash } from "react-icons/bs"
 
-const Content = () => {
-    const [items, setItems] = useState([
-        {
-            id: 1,
-            checked:true,
-            item: "beef and some grilled Cheese with Koobi nkwan"
-        },
-        {
-            id: 2,
-            checked:false,
-            item: "Item 2   need to be available "
-        },
-        {
-            id: 3,
-            checked:false,
-            item: "item3 need to be available"
-        }
-    ])
-
-    const handleCheck = (id) => {
-        // console.log(`key:${id}`)
-        const listItems = items.map((item)=> item.id === id ? {...item, checked:!item.checked } : item);
-        setItems(listItems);
-        localStorage.setItem('shoppinglist',JSON.stringify(listItems));
-    }
-
-    const handleDelete = (id)=>{
-        // console.log(`${id} was deleted`)
-        const listItems1 = items.filter((item)=>item.id !==id);
-        setItems(listItems1)
-        //this list all items except the one that matches the id
-    }
-    
-
-    
-  
+const Content = ({items, handleCheck,handleDelete}) => {
     return (
         <main className="main">
             {items.length ? (
