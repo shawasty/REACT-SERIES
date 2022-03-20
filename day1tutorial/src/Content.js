@@ -28,8 +28,10 @@ const Content = () => {
     }
 
     const handleDelete = (id)=>{
-        // console.log(`${id}`)
-        // const
+        // console.log(`${id} was deleted`)
+        const listItems1 = items.filter((item)=>item.id !==id);
+        setItems(listItems1)
+        //this list all items except the one that matches the id
     }
     
 
